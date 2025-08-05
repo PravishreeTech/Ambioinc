@@ -51,28 +51,29 @@ function initMap() {
 ////// INVESTORS - MAPS SECTION END ///////////
 
 ////// HOME - CONTACT SECTION START ///////////
-const serviceDropdown = document.getElementById("serviceDropdown");
-    const productDropdown = document.getElementById("productDropdown");
 
-    const productOptions = {
-      Pharmaceuticals: ["pharma1", "E-pharma2", "pharma3", "pharma4"],
-      Vaccines: ["iOS App", "Android App", "Cross Platform", "Wearable App"],
-      Biologics: ["Logo Design", "Wireframe", "Mobile UI", "Web UI"],
-      Biosimilars: ["Keyword Research", "Technical SEO", "On-page SEO", "Backlinking"],
-      Genomic: ["Social Media", "Email Campaigns", "Influencer Ads", "PPC"],
-    };
+  const serviceDropdown = document.getElementById("serviceDropdown");
+  const productDropdown = document.getElementById("productDropdown");
 
-    serviceDropdown.addEventListener("change", function () {
-      const selectedService = this.value;
-      productDropdown.innerHTML = `<option value="">Select a Product</option>`;
-      
-      if (productOptions[selectedService]) {
-        productOptions[selectedService].forEach(product => {
-          const option = document.createElement("option");
-          option.value = product;
-          option.textContent = product;
-          productDropdown.appendChild(option);
-        });
-      }
-    });
+  const productOptions = {
+    Pharmaceuticals: ["API’s & Bulk Drugs", "ANDA Formulations", "Specialty Drugs", "Oncology", "Infectious Diseases"],
+    Vaccines: ["Infectious Diseases", "Oncolytic Virus Platform", "mRNA Covid – 19 Universal Vaccine", "Viral Vector Platform (AAV & BV)", "BV driven VLP Platform "],
+    Biologics: ["Therapeutic Proteins", "Gene Therapy", "Monoclonal Antibodies", "Polyclonal Antibodies"],
+    Biosimilars: ["Insulin & Insulin Analogs", "Monoclonal Antibodies (MABS)", "Conjugated Vaccines"],
+    Genomic: ["VTM and Swabs best quality sold globally", "RT-PCR Kits for Covid-19", "Rapid Antigen Kits for Covid-19", "Face Mask & Gloves for Hospitals"],
+  };
+
+  serviceDropdown.addEventListener("change", function () {
+    const selectedService = this.value;
+    productDropdown.innerHTML = `<option value="">Select a Product</option>`;
+
+    if (productOptions[selectedService]) {
+      productOptions[selectedService].forEach(product => {
+        const option = document.createElement("option");
+        option.value = product;
+        option.textContent = product;
+        productDropdown.appendChild(option);
+      });
+    }
+  });
 ////// HOME - CONTACT SECTION END ///////////

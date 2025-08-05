@@ -35,7 +35,7 @@
                                 <a href="../index.html" class="nav-link">Home</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="../pages/about.html" class="nav-link">About</a>
+                                <a href="../pages/about.html" class="nav-link">About Us</a>
 
                             </li>
                             <li class="nav-item">
@@ -49,7 +49,7 @@
                                 <a href="../pages/news.html" class="nav-link">News</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../pages/investor.html" class="nav-link">Investors</a>
+                                <a href="../pages/investor.html" class="nav-link active">Investors</a>
                             </li>
                         </ul>
                     </nav>
@@ -64,8 +64,9 @@
             <div class="left-form">
                 <form class="contact-form">
                     <h2>Contact Us</h2>
+
                     <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="name" placeholder="Full Name" required>
 
                     <div class="inline-fields">
                         <div>
@@ -78,8 +79,25 @@
                         </div>
                     </div>
 
+                    <!-- ✅ Added Service Dropdown -->
+                    <label for="serviceDropdown">Service</label>
+                    <select id="serviceDropdown" required>
+                        <option value="">Select a Service</option>
+                        <option value="Pharmaceuticals">Pharmaceuticals</option>
+                        <option value="Vaccines">Vaccines</option>
+                        <option value="Biologics">Biologics</option>
+                        <option value="Biosimilars">Biosimilars</option>
+                        <option value="Genomic">Genomic</option>
+                    </select>
+
+                    <!-- ✅ Added Product Dropdown -->
+                    <label for="productDropdown">Product</label>
+                    <select id="productDropdown" required>
+                        <option value="">Select a Product</option>
+                    </select>
+                    
                     <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <textarea id="message" rows="5" placeholder="Message" required></textarea>
 
                     <button type="submit">Submit</button>
                 </form>
@@ -95,11 +113,12 @@
                 <div class="services-section">
                     <h2>Services</h2>
                     <ul>
-                        <li>PHARMACEUTICALS</li>
-                        <li>VACCINES</li>
-                        <li>BIOLOGICS</li>
-                        <li>BIOSIMILARS</li>
-                        <li>GENOMIC DIAGNOSTICS</li>
+                        <button>PHARMACEUTICALS</button>
+                        <button>GENOMIC DIAGNOSTICS</button>
+                        <br><br>
+                        <button>BIOLOGICS</button>
+                        <button>BIOSIMILARS</button>
+                        <button>VACCINES</button>
                     </ul>
                 </div>
             </div>

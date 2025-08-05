@@ -60,14 +60,16 @@
     }
 
     .sub-section h2 {
-      margin-bottom: 10px;
-      color: var(--primary-color);
+      font-size: 2.2rem;
+      margin-bottom: 20px;
       font-family:'Times New Roman', Times, serif;
+      color: var(--primary-color);
     }
 
     .sub-section p {
       font-size: 14px;
       line-height: 1.6;
+      font-size: 1rem;
     }
 
     .strategy {
@@ -77,6 +79,7 @@
     }
 
     .strategy h2 {
+      font-size: 2.2rem;
       margin-bottom: 10px;
       color: var(--primary-color);
       font-family:'Times New Roman', Times, serif;
@@ -85,6 +88,8 @@
     .strategy p {
       font-size: 14px;
       line-height: 1.6;
+      font-size: 1rem;
+
     }
 
     /* Right Block */

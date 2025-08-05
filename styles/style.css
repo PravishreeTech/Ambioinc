@@ -9,6 +9,7 @@
 :root {
   --primary-color: #17A2B8;
   /* Your header/nav background */
+  --primary-color-dark: #056574;
   --hover-color: #045f6d;
   /* Link hover effect */
   --text-color: #212529;
@@ -123,7 +124,11 @@ body {
   padding: 0.75rem 0.5rem;
   transition: color 0.3s ease;
 }
-
+.nav-item .nav-link.active {
+  /* text-decoration: underline; */
+  color: red;
+  font-weight: bold
+}
 .nav-link:hover {
   color: var(--hover-color);
 }
@@ -165,126 +170,76 @@ body {
 
 /****************** Header Section End ******************/
 
+/****************** About Us Section Start *****************/
 
-/****************** Old Slider Section Start *****************/
-.slider-container {
-  position: relative;
-  top: 79px;
-  max-width: 100%;
-  padding: 50px 0;
+.info-section {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 40px;
 }
 
-.slider {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  gap: 20px;
+.content {
+  flex: 1 1 400px;
 }
 
-.slider .card {
-  width: 300px;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 16px;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-  transform: scale(0.9);
-  opacity: 0.7;
-  transition: transform 0.5s ease, opacity 0.5s ease, box-shadow 0.5s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.slider .card.active {
-  transform: scale(1.1);
-  opacity: 1;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  z-index: 2;
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
-.slider .card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.slider .card button {
-  position: relative;
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #00b4d8;
+.content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1;
-  transition: transform 0.3s ease;
-}
-
-.slider .card:hover button {
-  transform: scale(1.1);
-}
-
-.nav-buttons {
-  margin-top: 20px;
-}
-
-.nav-buttons button {
-  background-color: #00b4d8;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  margin: 0 10px;
-  font-size: 18px;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-.dots {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
+.content button:hover {
+  background-color: var(--hover-color);
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ccc;
-  transition: background 0.3s;
-  cursor: pointer;
+.social-icons a {
+  margin-right: 15px;
+  padding: 10px;
+  color: var(--primary-color);
+  border-radius: 150px;
+  background-color: black;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
 }
 
-.dot.active {
-  background-color: #00b4d8;
+.social-icons a:hover {
+  color:var(--hover-color);
+  background-color: var(--primary-color);
 }
 
-@media (max-width: 1000px) {
-  .slider {
-    gap: 10px;
-  }
+.image-container {
+  flex: 1 1 400px;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .slider {
-    justify-content: center;
-  }
-
-  .card {
-    width: 260px;
-    height: 420px;
-  }
+.image-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
 }
+/****************** About Us Section End *****************/
 
-/****************** Old Slider Section End ******************/
 
-/****************** New Slider Section Start *****************/
+/****************** Slider Section Start *****************/
 .carousel .carousel-item {
   visibility: hidden;
   width: 250px;
@@ -306,36 +261,19 @@ body {
   -webkit-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
 }
-
-/* .carousel .carousel-item {
-       visibility: hidden;
-       width: 250px;
-       height: 250px;
-       position: absolute;
-       top: 0;
-       left: 0;
-   } */
-/* .slider-container {
-       position: relative;
-       top: 79px;
-       max-width: 100%;
-       padding: 50px 0;
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-   } */
+/* 
 .slider {
   display: flex;
   transition: transform 0.6s ease-in-out;
   gap: 20px;
-}
+} */
 
 .carousel-item {
-  width: 400px;
+  width: 900px;
   height: 1000px;
   background-size: cover;
   background-position: center;
-  border-radius: 16px;
+  border-radius: 30px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
@@ -350,7 +288,7 @@ body {
 .carousel-item.active {
   transform: scale(1.1);
   opacity: 1;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
 
@@ -365,7 +303,7 @@ body {
   position: relative;
   padding: 12px 24px;
   font-size: 16px;
-  background-color: #00b4d8;
+  background-color: var(--primary-color);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -378,39 +316,6 @@ body {
   transform: scale(1.1);
 }
 
-/* .carousel .nav-buttons {
-  margin-top: 20px;
-}
-
-.carousel .nav-buttons button {
-  background-color: #00b4d8;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  margin: 0 10px;
-  font-size: 18px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.dots {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ccc;
-  transition: background 0.3s;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: #00b4d8;
-} */
 
 @media (max-width: 1000px) {
   .slider {
@@ -424,7 +329,7 @@ body {
   }
 
   .carousel-item {
-    width: 260px;
+    width: 360px;
     height: 420px;
   }
 }
